@@ -16,7 +16,6 @@ spec:
       modelSecretKey: model
       # Self-hosted models can take longer than OpenShell's 60 s default.
       inferenceTimeout: 300
-    - name: brave
-      type: brave
-      credentialSecret: web-search
-      credentialSecretKey: api_key
+    # Web search is disabled: the `brave` provider (credentialSecret:
+    # web-search) was removed so the in-VM apply does not require a Brave
+    # key. To re-enable it, add it back and list the `web-search` Secret.
