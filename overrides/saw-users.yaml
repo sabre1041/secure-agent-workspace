@@ -4,3 +4,5 @@ users:
   - name: alice
     profiles:
       - custom-inference
+    secrets:
+      - inference
